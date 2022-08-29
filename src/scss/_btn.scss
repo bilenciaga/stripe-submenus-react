@@ -1,0 +1,72 @@
+@use "src/scss/_mixins.scss" as *;
+
+.btn {
+  border-radius: var(--radius);
+  border-color: transparent;
+  cursor: pointer;
+  transition: var(--transition);
+  background: none;
+
+  &__nav {
+    font-size: 2rem;
+    padding: .7rem .7rem .2rem .7rem;
+    color: var(--clr-white);
+    background: var(--clr-black);
+
+    @include respond(tab-port) {
+      display: none;
+    }
+
+    &:hover {
+      background: var(--clr-white);
+      color: var(--clr-black);
+    }
+  }
+
+  &__toggle {
+
+    }
+
+  &__signin {
+    display: none;
+    transition: ease-out .2s;
+
+    &:hover {
+      background: var(--clr-white);
+      color: var(--clr-black);
+    }
+
+    @include respond(tab-port) {
+      display: inline-block;
+      background-color: var(--clr-black);
+      font-size: 1.4rem;
+      padding: .75rem;
+      color: var(--clr-white);
+    }
+  }
+  
+  &__close {
+    font-size: 2rem;
+    background: transparent;
+    border-color: transparent;
+    color: var(--clr-grey-5);
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    cursor: pointer;
+  }
+
+  &__hero {
+    display: inline-block;
+    background-color: var(--clr-black);
+    font-size: 1.4rem;
+    padding: .75rem;
+    color: var(--clr-white);
+    transition: ease-out .2s;
+
+    &:hover {
+      background: var(--clr-white);
+      color: var(--clr-black);
+    }
+  }
+}
